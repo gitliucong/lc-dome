@@ -1,0 +1,119 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarBackgroundColor": "#345dc2",
+				"navigationBarTextStyle": "white",
+				"onReachBottomDistance": 50
+			}
+		},
+		{
+			"path": "pages/index/detailView",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},{
+			"path": "pages/category/category",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/article/article",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"onReachBottomDistance": 50
+			}
+
+		}, {
+			"path": "pages/question/question",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			} 
+		}, {
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			} 
+		}, {
+			"path": "pages/login/agreement",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			} 
+		}, {
+			"path": "pages/login/privacy",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			} 
+		}
+	],
+	"easycom": {
+		"autoscan": true
+		// "custom": {
+		// 			// uni-ui 规则如下配置
+		// 			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		// 		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		// "navigationBarTitleText": "black",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F9FB",
+		"navigationStyle": "custom"
+	},
+	"tabBar": {
+		"color": "#b0abb3", // 未选中字体颜色
+		"selectedColor": "#345dc2", // 选中字体颜色
+		"backgroundColor": "#F8F8F8", // 背景色
+		"borderStyle": "white", // 边框色"fontSize":"11px", //字体大小
+		"height": "52px", //标签栏高度
+
+		"list": [{
+				"pagePath": "pages/index/index",
+				"text": "首页",
+				"iconPath": "static/tab/index.png",
+				"selectedIconPath": "static/tab/index-active.png"
+			},
+			{
+				"pagePath": "pages/category/category",
+				"text": "分类",
+				"iconPath": "static/tab/category.png",
+				"selectedIconPath": "static/tab/article-active.png"
+			},
+			{
+				"pagePath": "pages/article/article",
+				"text": "阅读",
+				"iconPath": "static/tab/article.png",
+				"selectedIconPath": "static/tab/article-active.png"
+			},
+			{
+				"pagePath": "pages/question/question",
+				"text": "问答",
+				"iconPath": "static/tab/question.png",
+				"selectedIconPath": "static/tab/question-active.png"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "我的",
+				"iconPath": "static/tab/my.png",
+				"selectedIconPath": "static/tab/my-active.png"
+			}
+		]
+	}
+}
