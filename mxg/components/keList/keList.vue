@@ -31,27 +31,26 @@
 		name: "keList",
 		props: ['hotList'],
 		setup(props, context) {
-			const todetailView = ()=>{
+			const todetailView = () => {
 				uni.navigateTo({
-					url:'/pages/index/detailView'
+					url: '/pages/detail/detailView'
 				})
 			}
+			return {
+				todetailView
+			}
 		},
-		return{
-			...toRefs(data),
-			todetailView
-		}
 	}
 </script>
 
 <style lang="scss">
 	/* /课程列表 */
 	.hot-list {
-		    display: flex;
-		    width: 100%;
-			height: 100%;
-		    padding: 10px 0;
-		    border-bottom: 0.5px solid #f1f1f1;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		padding: 10px 0;
+		border-bottom: 0.5px solid #f1f1f1;
 
 
 		.list-left {

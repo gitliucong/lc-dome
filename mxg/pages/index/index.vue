@@ -45,9 +45,9 @@
 				<!-- 最近上新课程列表 -->
 				<scroll-view scroll-x="true" class="scroll-box">
 					<latelylist :latelyList="latelyList"></latelylist>
-						<latelylist :latelyList="latelyList"></latelylist>
-						<latelylist :latelyList="latelyList"></latelylist>
-						<latelylist :latelyList="latelyList"></latelylist>
+					<latelylist :latelyList="latelyList"></latelylist>
+					<latelylist :latelyList="latelyList"></latelylist>
+					<latelylist :latelyList="latelyList"></latelylist>
 				</scroll-view>
 			</view>
 			<!-- 免费精选 -->
@@ -95,7 +95,9 @@
 		toRefs,
 		ref
 	} from "vue";
-	import { onPageScroll } from '@dcloudio/uni-app'
+	import {
+		onPageScroll
+	} from '@dcloudio/uni-app'
 	import Search from "@/components/search-input/Search.vue"
 	import kelist from "@/components/keList/keList.vue"
 	import latelylist from "@/components/latelyLIst/latelyLIst.vue"
@@ -107,10 +109,10 @@
 				hotList: [], // 热门推荐课程列表数据
 				freeList: [], //免费精选课程列表数据
 				payList: [], //付费精品课程列表数据
-				latelyList: [] ,//最近上新课程列表数据
-				page:1,
-				pageSize:10,
-				flag:false,
+				latelyList: [], //最近上新课程列表数据
+				page: 1,
+				pageSize: 10,
+				flag: false,
 			});
 			/* 获取轮播图数据 */
 			getBanner().then(res => {
@@ -144,18 +146,18 @@
 				data.latelyList = res.data.records
 			})
 			/* 监听滚动条 */
-			window.addEventListener('scroll',()=>{
+			window.addEventListener('scroll', () => {
 				console.log(document.documentElement.scrollTop);
-				if(document.documentElement.scrollTop>=1400){
+				if (document.documentElement.scrollTop >= 1400) {
 					data.flag = true
-				}else{
+				} else {
 					data.flag = false
 				}
 			})
 			/* 点击回到顶部 */
-			const scrolTop = ()=>{
+			const scrolTop = () => {
 				uni.pageScrollTo({
-					scrollTop:0
+					scrollTop: 0
 				})
 			}
 			return {
@@ -169,17 +171,17 @@
 			latelylist
 		},
 		onReachBottom() {
-		   this.page ++
-		   console.log(this.page);
-		   getPay(this.page, this.pageSize).then(res => {
-		    this.payList = [...res.data.records,...this.payList]
-		   })
-		  }
+			this.page++
+			console.log(this.page);
+			getPay(this.page, this.pageSize).then(res => {
+				this.payList = [...res.data.records, ...this.payList]
+			})
+		}
 	}
 </script>
 
 <style scoped lang="scss">
-	.gotop{
+	.gotop {
 		position: fixed;
 		right: 20px;
 		bottom: 100px;
@@ -189,17 +191,20 @@
 		background-color: rgba(111, 111, 111, 0.3);
 		text-align: center;
 		line-height: 50px;
-		.icon{
+
+		.icon {
 			font-size: 26px;
 			font-weight: 800;
 		}
 	}
+
 	.scroll-box {
 		white-space: nowrap;
 		height: 190px;
 		// display: block;
 	}
-	.isScroll{
+
+	.isScroll {
 		width: 350px;
 	}
 
@@ -287,7 +292,6 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-
 	}
 
 	.logo {

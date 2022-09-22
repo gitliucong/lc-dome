@@ -9,7 +9,14 @@
 			}
 		},
 		{
-			"path": "pages/index/detailView",
+			"path": "pages/detail/detailView",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		},{
+			"path": "pages/detail/content",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false

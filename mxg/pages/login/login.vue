@@ -20,7 +20,6 @@
 			 <span class="agreement" @click="goAgreement">《用户服务协议》</span>
 			 <span class="policy" @click="goPrivacy">《隐私权政策》</span> 
 		</radio-group>
-		
 	</view>
 </template>
 
