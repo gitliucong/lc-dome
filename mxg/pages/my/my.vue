@@ -7,8 +7,10 @@
 			<!-- 请登录 -->
 			<view class="my-header" @click="tologin">
 				<view class="header-contnet">
-					<img src="/static/images/logo.png" alt="">
-					<view class="header-info">请登录</view>
+					<img v-if="token==null" src="../../static/images/logo.png" alt="">
+					<img v-if="token" :src="names.imageUrl" alt="">
+					<view class="header-info" v-if="token==null">请登录</view>
+					<view class="header-info" v-if="token">{{names.nickName}}</view>
 				</view>
 				<view class="">
 					<text class="iconfont">&#xe62d</text>
@@ -16,14 +18,15 @@
 			</view>
 			<!-- 我的订单   余额   学习 -->
 			<view class="my-aside">
-				<view class="aside-box">
+				<view class="aside-box" @click="goOrder">
 					<view class="">
 						<text class="iconfont incon">&#xe7fa</text>
 						<text>我的订单</text>
 					</view>
 					<view class="iconfont">&#xe62d</view>
 				</view>
-				<view class="aside-box">
+				<!-- 我的余额 -->
+				<view class="aside-box" @click="goBalance">
 					<view class="">
 						<text class="iconfont incon">&#xe7f9</text>
 						<text>我的余额</text>
@@ -40,13 +43,15 @@
 			</view>
 			<!-- 设置  意见反馈-->
 			<view class="my-setup">
-				<view class="aside-box">
+				<!-- 设置 -->
+				<view class="aside-box" @click="goSetup">
 					<view class="">
 						<text class="iconfont incon">&#xe7fb</text>
 						<text>设置</text>
 					</view>
 					<view class="iconfont">&#xe62d</view>
 				</view>
+				<!-- 意见反馈 -->
 				<view class="aside-box">
 					<view class="">
 						<text class="iconfont incon">&#xe7e2</text>
@@ -55,8 +60,9 @@
 					<view class="iconfont">&#xe62d</view>
 				</view>
 			</view>
-			<view class="my-footer">
-				<view class="aside-box">
+			<!-- 关于我们 -->
+			<view class="my-footer" >
+				<view class="aside-box" @click="goAboutus">
 					<view class="">
 						<text class="iconfont incon">&#xe8b9</text>
 						<text>关于我们</text>
@@ -81,17 +87,53 @@
 	export default {
 		setup(props, context) {
 			const data = reactive({
-
+				names:'',
+				token:'',
 			});
+			/* 跳转到登录页面 */
 			const tologin = () => {
 				uni.navigateTo({
 					url:"/pages/login/login"
 				})
 			}
+			/* 跳转到关于我们 */
+			const goAboutus = ()=>{
+				uni.navigateTo({
+					url:'/pages/my/aboutUs'
+				})
+			}
+			/* 跳转到设置 */
+			const goSetup = ()=>{
+				uni.navigateTo({
+					url:'/pages/my/setup'
+				})
+			}
+			/* 跳转到我的余额 */
+			const goBalance = ()=>{
+				uni.navigateTo({
+					url:'/pages/my/balance'
+				})
+			}
+			/* 跳转到我的订单 */
+			const goOrder = ()=>{
+				uni.navigateTo({
+					url:'/pages/my/orderView'
+				})
+			}
+			
 			return {
 				...toRefs(data),
-				tologin
+				tologin,
+				goAboutus,
+				goSetup,
+				goBalance,
+				goOrder
 			}
+			
+		},
+		onShow() {
+		   this.names = JSON.parse(sessionStorage.getItem('data'))
+		   this.token = sessionStorage.getItem('token')
 		}
 	}
 </script>
@@ -132,6 +174,7 @@
 				align-items: center;
 
 				img {
+					border-radius: 50%;
 					width: 82px;
 					height: 82px;
 				}

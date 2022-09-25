@@ -12,30 +12,6 @@
 				</scroll-view>
 			</view>
 			<!-- 课程列表 -->
-			<!-- <view class="aside-list">
-				<view class="list-box" v-for="item in searchData" :key="item.id" @click="toContent(item.id)">
-					
-					<view class="list-top">
-						<view class="top-left"  :style="`max-width: ${item.imageUrl ? '233':'345'}px;`">
-							<view class="title">
-								{{item.title}}
-							</view>
-							<view class="info">
-								{{item.summary}}
-							</view>
-						</view>
-						<view class="top-right" v-if="item.imageUrl">
-							<img :src="item.imageUrl" alt="">
-						</view>
-					</view>
-					
-					<view class="list-btm">
-						<text class="author">{{item.nickName}}</text>
-						<text>·{{item.updateDate}}</text>
-						<text> ·{{item.viewCount}}赞</text>
-					</view>
-				</view>
-			</view> -->
 			<swiper class="swiper-box" :current="activeIndex" @change="changeCurrent">
 				<swiper-item v-for="(item,index) in 9">
 					<scroll-view class="scroll-box" scroll-y="true">

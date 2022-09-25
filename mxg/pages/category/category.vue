@@ -1,4 +1,5 @@
 <template>
+	<!-- /* 分类页面 */ -->
 	<view>
 		<!-- 头部 -->
 		<view class="header">
@@ -36,6 +37,7 @@
 				categoryList: [], //列表数据
 				categoryData: [], //列表数据
 			});
+			/* 分类侧边栏  和 小分类 */
 			getCategory().then(res => {
 				console.log(res.data);
 				data.categoryList = res.data
@@ -51,7 +53,7 @@
 <style  lang="scss">
 	.aside {
 		display: flex;
-
+		/* 左边侧边栏 */
 		.left {
 			width: 100px;
 			// height: 100vh;
@@ -66,7 +68,7 @@
 
 			.scroll-Y {
 				height: calc(100vh - 94px);
-
+				/* 左边栏  单个 */
 				.left-view {
 					height: 74px;
 					line-height: 74px;
@@ -81,7 +83,7 @@
 				}
 			}
 		}
-
+		/* 右边分类 */
 		.right {
 			width: 100%;
 			height: 100%;
@@ -89,7 +91,7 @@
 			flex-wrap: wrap;
 			padding-top: 17px;
 			padding-left: 5px;
-
+			
 			.names {
 				font-size: 12px;
 				line-height: 30px;

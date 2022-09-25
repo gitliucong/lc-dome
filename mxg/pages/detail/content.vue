@@ -1,5 +1,6 @@
 <template>
 	<view class="body">
+		/* 内容区 */
 		<view class="body-top">
 			<view class="header">
 				<text class="iconfont icon" @click="goreturn">&#xe8b5</text>
@@ -19,6 +20,7 @@
 			</view>
 			<view class="htmlContent" v-html="contentData.htmlContent"></view>
 		</view>
+		<!-- 评论区 -->
 		<view class="body-bottom" >
 			<view class="btm-comment">
 				<view class="btm-border"></view>
@@ -39,10 +41,12 @@
 				</view>
 			</view>
 		</view>
+		/* 发表评论 */
 		<view class="publish" v-show="status == 'true'">
 			<input class="uni-input" focus placeholder="有何高见,展开讲讲......" />
 			<button type="default" size="mini">提交</button>
 		</view>
+		/* 关注、回答问题 */
 		<view class="follow-box" v-show="status == 'false'">
 			<view class="follow">
 				<text class="iconfont">&#xe613</text>关注问题
@@ -71,14 +75,14 @@
 	export default {
 		setup(props, context) {
 			const data = reactive({
-				contentData: [],
-				contentList: [],
+				contentData: [], //文章内容数据
+				contentList: [], //评论内容数据
 				status: false,
 				id: 0,
 			});
 			const route = useRoute()
 			console.log(route.query.id);
-			
+			/* 接收传递过来的状态 status */
 			onLoad((option) => {
 				data.status = option.status
 				data.id = option.id

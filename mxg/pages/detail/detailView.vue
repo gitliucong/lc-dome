@@ -92,7 +92,6 @@
 						<p>购买套餐</p>
 					</view>
 				</view>
-				
 			</view>
 		</view>
 

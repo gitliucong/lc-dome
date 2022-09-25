@@ -1,4 +1,5 @@
 <template>
+	/* 课程详情 */
 	<view>
 		<view class="top-pic">
 			<span @click="back"></span>

@@ -15,21 +15,25 @@
 				"enablePullDownRefresh": false
 			}
 
-		},{
+		}, {
 			"path": "pages/detail/content",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 
-		},{
+		}, 
+		/* 分类 */
+		{
 			"path": "pages/category/category",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 
-		}, {
+		}, 
+		/* 阅读 */
+		{
 			"path": "pages/article/article",
 			"style": {
 				"navigationBarTitleText": "",
@@ -37,37 +41,87 @@
 				"onReachBottomDistance": 50
 			}
 
-		}, {
+		}, 
+		/* 问答 */
+		{
 			"path": "pages/question/question",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
 			}
 
-		}, {
+		}, 
+		/* 我的 */
+		{
 			"path": "pages/my/my",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
-			} 
-		}, {
+			}
+		}, 
+		/* 关于我们 */
+		{
+			"path": "pages/my/aboutUs",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, 
+		/* 设置 */	
+		{
+			"path": "pages/my/setup",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, 
+		/* 我的余额 */
+		{
+			"path": "pages/my/balance",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, 
+		/* 我的订单 */
+		{
+			"path": "pages/my/orderView",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, 
+		/* 立即支付 */
+		{
+			"path": "pages/my/payment",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, 
+		/* 登录 */
+		{
 			"path": "pages/login/login",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
-			} 
-		}, {
+			}
+		}, 
+		/* 用户服务协议 */
+		{
 			"path": "pages/login/agreement",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
-			} 
-		}, {
+			}
+		}, 
+		/* 隐私政策 */
+		{
 			"path": "pages/login/privacy",
 			"style": {
 				"navigationBarTitleText": "",
 				"enablePullDownRefresh": false
-			} 
+			}
 		}
 	],
 	"easycom": {

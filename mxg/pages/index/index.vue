@@ -170,6 +170,7 @@
 			kelist,
 			latelylist
 		},
+		/* 加载数据 */
 		onReachBottom() {
 			this.page++
 			console.log(this.page);
