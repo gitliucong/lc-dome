@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(229, 229, 229);
+        }
+        .ulbox {
+            color: aliceblue;
+            width: 240px;
+            height: 100vh;
+            float: left;
+            background-color: rgb(123, 123, 123);
+        }
+        .ulbox ul{
+            width: 100%;
+            height: 400px;
+            border: 1px solid #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 30px 0;
+            box-sizing: border-box;
+        }
+        ul li{
+            height: 50px;
+            line-height: 50px;
+            box-sizing: border-box;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        li:hover{
+            background-color: rgb(255, 104, 1);
+        }
+        .contentbox{
+            position: fixed;
+            top: 40px;
+            left: 240px;
+            width: 600px;
+            height: 800px;
+            background-color: #fff;
+            display: none;
+            color: #000;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: start;
+        }
+        li:hover:first-child .contentbox{
+            display: flex;
+        }
+        li:hover:nth-child(2) .contentbox{
+            display: flex;
+            top: 90px;
+        }
+        li:hover:nth-child(3) .contentbox{
+            display: flex;
+            top: 140px;
+        }
+        li:hover:nth-child(4) .contentbox{
+            display: flex;
+            top: 190px;
+        }
+        li:hover:nth-child(5) .contentbox{
+            display: flex;
+            top: 240px;
+        }
+        li:hover:nth-child(6) .contentbox{
+            display: flex;
+            top: 290px;
+        }
+        .conx{
+            background-color: aqua;
+            height: 10%;
+            line-height: 80px;
+            vertical-align: middle;
+            display: flex;
+            justify-content: space-around;
+            width: 33%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ulbox">
+        <ul>
+            <li>
+                <span>手机 电话卡</span>
+                <span>&gt;</span>
+                <div class="contentbox">
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span>笔记本 显示器 平板</span>
+                <span>&gt;</span>
+                <div class="contentbox">
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span>手机 电话卡</span>
+                <span>&gt;</span>
+                <div class="contentbox">
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span>笔记本 显示器 平板</span>
+                <span>&gt;</span>
+                <div class="contentbox">
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span>手机 电话卡</span>
+                <span>&gt;</span>
+                <div class="contentbox">
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span>笔记本 显示器 平板</span>
+                <span>&gt;</span>
+                <div class="contentbox">
+                    <div class="conx">
+                        <div class="imgbox">
+                            <img src="./phone.png" alt="">
+                        </div>
+                        <div class="text">
+                            小米MIX FOLD
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
