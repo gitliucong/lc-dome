@@ -75,6 +75,14 @@
 				"enablePullDownRefresh": false
 			}
 		}, 
+		/* 意见反馈 */	
+		{
+			"path": "pages/my/feedback",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		}, 
 		/* 我的余额 */
 		{
 			"path": "pages/my/balance",

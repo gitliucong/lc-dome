@@ -51,6 +51,7 @@
 				console.log(e);
 				data.activeIndex = e.detail.current
 				getArticle().then(res => {
+					console.log(res);
 					data.articleList = res.data
 				})
 			}
@@ -70,6 +71,14 @@
 			Search,
 			myarticle
 		},
+		/* 加载数据 */
+		onReachBottom() {
+			this.page++
+			console.log(this.page);
+			getArticle(this.page, this.pageSize).then(res => {
+				this.articleList = [...res.data.records, ...this.articleList]
+			})
+		}
 		
 	}
 </script>

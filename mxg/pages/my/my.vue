@@ -42,7 +42,7 @@
 				</view>
 			</view>
 			<!-- 设置  意见反馈-->
-			<view class="my-setup">
+			<view class="my-setup" >
 				<!-- 设置 -->
 				<view class="aside-box" @click="goSetup">
 					<view class="">
@@ -52,7 +52,7 @@
 					<view class="iconfont">&#xe62d</view>
 				</view>
 				<!-- 意见反馈 -->
-				<view class="aside-box">
+				<view class="aside-box" @click="goFeedback">
 					<view class="">
 						<text class="iconfont incon">&#xe7e2</text>
 						<text>意见反馈</text>
@@ -120,6 +120,12 @@
 					url:'/pages/my/orderView'
 				})
 			}
+			/* 跳转到意见反馈 */
+			const goFeedback = ()=>{
+				uni.navigateTo({
+					url:'/pages/my/feedback'
+				})
+			}
 			
 			return {
 				...toRefs(data),
@@ -127,7 +133,8 @@
 				goAboutus,
 				goSetup,
 				goBalance,
-				goOrder
+				goOrder,
+				goFeedback
 			}
 			
 		},

@@ -38,7 +38,7 @@
 						<view class="no" @click="closePop">
 							取消
 						</view>
-						<view class="yes">
+						<view class="yes" >
 							确定
 						</view>
 					</view>
