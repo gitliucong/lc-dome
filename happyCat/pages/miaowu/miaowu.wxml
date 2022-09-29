@@ -1,5 +1,2 @@
 <!--pages/miaowu/miaowu.wxml-->
-<view class="header">
-<img src="../../images/小怪兽.png" alt=""/>
-
-</view>
+<text>pages/miaowu/miaowu.wxml</text>
