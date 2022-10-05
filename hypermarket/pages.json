@@ -1,0 +1,68 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "优购首页"
+			}
+		}, {
+			"path": "pages/classification/classification",
+			"style": {
+				"navigationBarTitleText": "商品分类",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/car/car",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"tabBar": {
+		"color": "#999",
+		"selectedColor": "#ff2d4a",
+		"backgroundColor": "#fafafa",
+		"position": "bottom",
+		"borderStyle": "black",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"text": "首页",
+			"iconPath": "icons/home.png",
+			"selectedIconPath": "icons/home-o.png"
+		}, {
+			"pagePath": "pages/classification/classification",
+			"text": "分类",
+			"iconPath": "icons/category.png",
+			"selectedIconPath": "icons/category-o.png"
+		}, {
+			"pagePath": "pages/car/car",
+			"text": "购物车",
+			"iconPath": "icons/cart.png",
+			"selectedIconPath": "icons/cart-o.png"
+		}, {
+			"pagePath": "pages/my/my",
+			"text": "我的",
+			"iconPath": "icons/my.png",
+			"selectedIconPath": "icons/my-o.png"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#eb4450",
+		"backgroundTextStyle": "light"
+		// "easycom": {
+		// 	"autoscan": true, //是否自动扫描组件
+		// }
+	},
+	"uniIdRouter": {}
+}
