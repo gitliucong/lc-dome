@@ -63,7 +63,7 @@
 	})
 	/* 获取楼层数据 */
 	getFloorData().then((res:any)=>{
-		console.log(res.message);
+		// console.log(res.message);
 		data.floordataList = res.message
 	})
 	/* 注册组件 */
@@ -89,7 +89,6 @@
 				justify-content: space-between;
 				flex-wrap: wrap;
 				margin-left: 10rpx;
-				
 				.product_right_img{
 					width: 49%;
 					margin-bottom: 10rpx;
